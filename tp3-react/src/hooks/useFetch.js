@@ -31,7 +31,7 @@ export const useFetch = (url) => {
     if (url) {
       getFetch();
     }
-  }, [url]); // ✅ Se ejecuta cuando la URL cambia
+  }, [url]);
 
   return { ...state };
 };
