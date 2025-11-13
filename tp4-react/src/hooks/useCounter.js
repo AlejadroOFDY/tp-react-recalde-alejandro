@@ -13,3 +13,5 @@ export const useCounter = (initialValue) => {
   };
   return { count, handleIncrement, handleDecrement };
 };
+
+export default useCounter;
