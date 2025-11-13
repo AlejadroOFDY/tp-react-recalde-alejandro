@@ -20,44 +20,76 @@ export const RegisterPage = () => {
     navigate("/login");
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="username"
-        placeholder="username"
-        value={value.username}
-        onChange={handleChange}
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="email"
-        value={value.email}
-        onChange={handleChange}
-      />
-      <input
-        type="password"
-        name="password"
-        placeholder="password"
-        value={value.password}
-        onChange={handleChange}
-      />
-      <input
-        type="text"
-        name="firstname"
-        placeholder="firstname"
-        value={value.firstname}
-        onChange={handleChange}
-      />
-      <input
-        type="text"
-        name="lastname"
-        placeholder="lastname"
-        value={value.lastname}
-        onChange={handleChange}
-      />
-
-      <button type="submit">Registrarse</button>
-    </form>
+    <div className="container mt-4">
+      <div className="row justify-content-center">
+        <div className="col-md-8">
+          <div className="card">
+            <div className="card-body">
+              <form onSubmit={handleSubmit}>
+                <div className="mb-3">
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="username"
+                    placeholder="username"
+                    value={value.username}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="email"
+                    className="form-control"
+                    name="email"
+                    placeholder="email"
+                    value={value.email}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="password"
+                    className="form-control"
+                    name="password"
+                    placeholder="password"
+                    value={value.password}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="firstname"
+                    placeholder="firstname"
+                    value={value.firstname}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="lastname"
+                    placeholder="lastname"
+                    value={value.lastname}
+                    onChange={handleChange}
+                  />
+                </div>
+                <button type="submit" className="btn btn-success w-100">
+                  Registrarse
+                </button>
+                <div>
+                  <p>
+                    ¿Ya tienes una cuenta?
+                    <a href="/login"> Iniciar sesión</a>
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };

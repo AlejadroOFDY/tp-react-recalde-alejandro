@@ -10,15 +10,29 @@ export const HomePage = () => {
   );
 
   return (
-    <>
-      <h1>Personajes de Dragon Ball</h1>
-      {isLoading && <Loading />}
-      {data && !isLoading && <CharacterInfo character={data} />}
-      <div>
-        <button onClick={handleDecrement}>Anterior</button>
-
-        <button onClick={handleIncrement}>Siguiente</button>
+    <div className="container mt-4">
+      <div className="text-center mb-4">
+        <h1 className="text-primary">Personajes de Dragon Ball</h1>
       </div>
-    </>
+
+      <div className="card p-3 mb-4">
+        <div className="card-body text-center">
+          {isLoading && <Loading />}
+          {data && !isLoading && <CharacterInfo character={data} />}
+        </div>
+      </div>
+
+      <div className="text-center">
+        <button
+          className="btn btn-outline-primary me-2"
+          onClick={handleDecrement}
+        >
+          Anterior
+        </button>
+        <button className="btn btn-outline-primary" onClick={handleIncrement}>
+          Siguiente
+        </button>
+      </div>
+    </div>
   );
 };

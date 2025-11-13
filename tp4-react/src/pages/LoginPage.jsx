@@ -30,22 +30,46 @@ export const LoginPage = () => {
     handleReset();
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="email"
-        name="email"
-        placeholder="email"
-        value={value.email}
-        onChange={handleChange}
-      ></input>
-      <input
-        type="password"
-        name="password"
-        placeholder="password"
-        value={value.password}
-        onChange={handleChange}
-      ></input>
-      <button type="submit">Iniciar Sesión</button>
-    </form>
+    <div className="container mt-5">
+      <div className="row justify-content-center">
+        <div className="col-md-6">
+          <div className="card">
+            <div className="card-body">
+              <form onSubmit={handleSubmit}>
+                <div className="mb-3">
+                  <input
+                    type="email"
+                    className="form-control"
+                    name="email"
+                    placeholder="email"
+                    value={value.email}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="password"
+                    className="form-control"
+                    name="password"
+                    placeholder="password"
+                    value={value.password}
+                    onChange={handleChange}
+                  />
+                </div>
+                <button type="submit" className="btn btn-primary w-100">
+                  Iniciar Sesión
+                </button>
+                <div>
+                  <p>
+                    ¿No tienes una cuenta?
+                    <a href="/register"> Registrate</a>
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };

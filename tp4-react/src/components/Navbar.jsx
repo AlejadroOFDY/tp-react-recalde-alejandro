@@ -9,13 +9,13 @@ export const Navbar = () => {
   };
 
   return (
-    <nav>
-      <div
-        onClick={() => {
-          "/home";
-        }}
-      ></div>
-      <button onClick={handleLogout}>Logout</button>
+    <nav className="navbar navbar-dark bg-primary">
+      <div className="container">
+        <div className="navbar-brand">Trabajo Práctico N°4 - React</div>
+        <button className="btn btn-outline-light" onClick={handleLogout}>
+          Logout
+        </button>
+      </div>
     </nav>
   );
 };
